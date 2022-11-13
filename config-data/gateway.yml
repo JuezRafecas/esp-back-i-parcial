@@ -11,11 +11,11 @@ spring:
           enabled: true
       routes:
         - id: msmovie
-          uri: lb://movie-service
+          uri: lb://api-movie
           predicates:
             - Path=/api/v1/movies/**
         - id: mscatalog
-          uri: lb://catalog-service
+          uri: lb://api-catalog
           predicates:
             - Path=/api/v1/catalog/**
 
